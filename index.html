@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Icons -->
+    <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculadora">
+        <div class="color-container">
+            <div class="color" id="light"></div>
+            <div class="color" id="dark"></div>
+            <div class="color" id="purple"></div>
+            <div class="color" id="orange"></div>
+            <div class="color" id="blue"></div>
+        </div>
+        <div class="pantalla">
+            <input type="text" readonly id="pantalla" value="0">
+        </div>
+        <div class="botones">
+            <input readonly value="+" class="boton boton1" id="sumar"></input>
+            <input readonly value="-" class="boton boton2" id="restar"></input>
+            <input readonly value="/" class="boton boton3" id="dividir"></input>
+            <input readonly value="*" class="boton boton4" id="multiplicar"></input>
+            <input readonly value="7" class="boton boton5 boton-num"></input>
+            <input readonly value="8" class="boton boton6 boton-num"></input>
+            <input readonly value="9" class="boton boton7 boton-num"></input>
+            <div class="boton icon" id="color">
+                <ion-icon name="color-palette-outline"></ion-icon>
+            </div>
+            <input readonly value="4" class="boton boton9 boton-num"></input>
+            <input readonly value="5" class="boton boton10 boton-num"></input>
+            <input readonly value="6" class="boton boton11 boton-num"></input>
+            <div class="boton icon" id="darkmode"><ion-icon name="contrast-outline"></ion-icon></div>
+            <input readonly value="1" class="boton boton13 boton-num"></input>
+            <input readonly value="2" class="boton boton14 boton-num"></input>
+            <input readonly value="3" class="boton boton15 boton-num"></input>
+            <input readonly value="=" class="boton boton16" id="igual"></input>
+            <input readonly value="." class="boton boton17 boton-num"></input>
+            <input readonly value="0" class="boton boton18 boton-num"></input>
+            <div class="boton icon" id="remove"><ion-icon name="backspace-outline"></ion-icon></div>
+            <input readonly value="C" class="boton boton20" id="reset"></input>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
