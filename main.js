@@ -129,12 +129,10 @@ const reset = document.querySelector('#reset')
 reset.addEventListener('click', () => {
     resetColor()
     displayReset()
-    resultado = ""
-    primerNum = 0
-    segundoNum = 0
-    cuenta = 0
     resultadoFinal = 0
-    pantalla.value = ""
+    cuenta = ""
+    pantalla.value = resultadoFinal
+    resultado = resultadoFinal
 })
 
 // Remove last digit
