@@ -40,7 +40,7 @@ sumar.addEventListener('click', () => {
     resetColor()
     sumar.style.background = "#fff"
     if (cuenta === "") {
-        primerNum = Number(resultado)
+        primerNum = Number(resultado).toFixed(3) * 1
         resultado = ""
         cuenta = "+"
     } 
@@ -57,7 +57,7 @@ restar.addEventListener('click', () => {
     resetColor()
     restar.style.background = "#fff"
     if (cuenta === "") {
-        primerNum = Number(resultado)
+        primerNum = Number(resultado).toFixed(3) * 1
         resultado = ""
         cuenta = "-"
     } 
@@ -74,7 +74,7 @@ multiplicar.addEventListener('click', () => {
     resetColor()
     multiplicar.style.background = "#fff"
     if (cuenta === "") {
-        primerNum = Number(resultado)
+        primerNum = Number(resultado).toFixed(3) * 1
         resultado = ""
         cuenta = "*"
     } 
@@ -91,7 +91,7 @@ dividir.addEventListener('click', () => {
     resetColor()
     dividir.style.background = "#fff"
     if (cuenta === "") {
-        primerNum = Number(resultado)
+        primerNum = Number(resultado).toFixed(3) * 1
         resultado = ""
         cuenta = "/"
     } 
@@ -107,7 +107,7 @@ const igual = document.querySelector('#igual')
 igual.addEventListener('click', () => {
     resetColor()
     displayReset()
-    segundoNum = Number(resultado)
+    segundoNum = Number(resultado).toFixed(3) * 1
     resultado = ""
     if (cuenta === "") {
         resultadoFinal = segundoNum
@@ -119,8 +119,8 @@ igual.addEventListener('click', () => {
         else if (cuenta === "/") resultadoFinal = primerNum / segundoNum
     }
     cuenta = ""
-    pantalla.value = resultadoFinal
-    resultado = resultadoFinal
+    pantalla.value = resultadoFinal.toFixed(3) * 1
+    resultado = resultadoFinal.toFixed(3) * 1
 })
 
 // Reset
@@ -132,7 +132,7 @@ reset.addEventListener('click', () => {
     resultadoFinal = 0
     cuenta = ""
     pantalla.value = resultadoFinal
-    resultado = resultadoFinal
+    resultado = ""
 })
 
 // Remove last digit
