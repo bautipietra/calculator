@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculator</title>
     <!-- Icons -->
     <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script>
     <!-- CSS -->
@@ -20,13 +20,14 @@
             <div class="color" id="blue"></div>
         </div>
         <div class="pantalla">
-            <input type="text" readonly id="pantalla" value="0">
+            <input type="text" readonly id="pantalla" value="0" autocomplete="off">
+            <p id="display"></p>
         </div>
         <div class="botones">
-            <input readonly value="+" class="boton boton1" id="sumar"></input>
-            <input readonly value="-" class="boton boton2" id="restar"></input>
-            <input readonly value="/" class="boton boton3" id="dividir"></input>
-            <input readonly value="*" class="boton boton4" id="multiplicar"></input>
+            <input readonly value="+" class="boton boton1 cuenta" id="sumar"></input>
+            <input readonly value="-" class="boton boton2 cuenta" id="restar"></input>
+            <input readonly value="/" class="boton boton3 cuenta" id="dividir"></input>
+            <input readonly value="*" class="boton boton4 cuenta" id="multiplicar"></input>
             <input readonly value="7" class="boton boton5 boton-num"></input>
             <input readonly value="8" class="boton boton6 boton-num"></input>
             <input readonly value="9" class="boton boton7 boton-num"></input>

@@ -4,6 +4,7 @@
 html { /* 1rem = 10 px */
     font-size: 62.5%;
     font-family: 'Roboto Mono', monospace;
+    transition: 0.3s;
 }
 
 body {
@@ -48,10 +49,19 @@ overflow-x: hidden;
     padding: 20px;
     gap: 40px;
     border-radius: 10px;
+    transition: 0.3s;
     .pantalla {
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
+        #display {
+            position: absolute;
+            right: 0;
+            margin-right: 20px;
+            font-size: 1.6rem;
+            color: #999;
+        }
         input {
             background-color: #e3e0e8;
             color: #111;
@@ -63,6 +73,7 @@ overflow-x: hidden;
             border-radius: 10px;
             font-size: 2rem;
             cursor: default;
+            transition: 0.3s;
         }
     }
     .botones {
@@ -80,6 +91,10 @@ overflow-x: hidden;
             max-width: fit-content;
             border-radius: 10px;
             font-size: 1.4rem;
+            transition: 0.3s;
+            &:active {
+                background-color: #fff;
+            }
         }
         .icon {
             display: flex;
@@ -105,7 +120,7 @@ overflow-x: hidden;
     transition: 0.3s;
     opacity: 0;
     z-index: -1;
-    transform: translate(-50%, -30%);
+    transform: translate(-50%, 0%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
     .color {
         border-radius: 50%;

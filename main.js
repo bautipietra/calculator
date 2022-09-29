@@ -1,8 +1,27 @@
 let resultado = ""
 let primerNum;
 let segundoNum;
-let cuenta;
+let cuenta = ""
 let resultadoFinal;
+let display;
+
+// Reset button color
+
+const resetColor = () => {
+    document.querySelectorAll('.cuenta').forEach(elem => elem.style.background = "#e3e0e8");
+}
+
+// Display account
+
+const displayPantalla = document.querySelector('#display')
+
+const displayAccount = () => {
+    displayPantalla.textContent = `${primerNum} ${cuenta}`
+}
+
+const displayReset = () => {
+    displayPantalla.textContent = ``
+}
 
 // Numero
 
@@ -17,48 +36,88 @@ const botonNum = document.querySelectorAll('.boton-num').forEach(elem => elem.ad
 
 const sumar = document.querySelector("#sumar")
 sumar.addEventListener('click', () => {
-    primerNum = Number(resultado)
-    resultado = ""
-    cuenta = "+"
+    resetColor()
+    sumar.style.background = "#fff"
+    if (cuenta === "") {
+        primerNum = Number(resultado)
+        resultado = ""
+        cuenta = "+"
+    } 
+    else {
+        cuenta = "+"
+    }
+    displayAccount()
 })
 
 // Resta
 
 const restar = document.querySelector("#restar")
 restar.addEventListener('click', () => {
-    primerNum = Number(resultado)
-    resultado = ""
-    cuenta = "-"
+    resetColor()
+    restar.style.background = "#fff"
+    if (cuenta === "") {
+        primerNum = Number(resultado)
+        resultado = ""
+        cuenta = "-"
+    } 
+    else {
+        cuenta = "-"
+    }
+    displayAccount()
 })
 
 // Multiplicar
 
 const multiplicar = document.querySelector("#multiplicar")
 multiplicar.addEventListener('click', () => {
-    primerNum = Number(resultado)
-    resultado = ""
-    cuenta = "*"
+    resetColor()
+    multiplicar.style.background = "#fff"
+    if (cuenta === "") {
+        primerNum = Number(resultado)
+        resultado = ""
+        cuenta = "*"
+    } 
+    else {
+        cuenta = "*"
+    }
+    displayAccount()
 })
 
 // Dividir
 
 const dividir = document.querySelector("#dividir")
 dividir.addEventListener('click', () => {
-    primerNum = Number(resultado)
-    resultado = ""
-    cuenta = "/"
+    resetColor()
+    dividir.style.background = "#fff"
+    if (cuenta === "") {
+        primerNum = Number(resultado)
+        resultado = ""
+        cuenta = "/"
+    } 
+    else {
+        cuenta = "/"
+    }
+    displayAccount()
 })
 
 // Resultado
 
 const igual = document.querySelector('#igual')
 igual.addEventListener('click', () => {
+    resetColor()
+    displayReset()
     segundoNum = Number(resultado)
     resultado = ""
-    if (cuenta === "+") resultadoFinal = primerNum + segundoNum
-    else if (cuenta === "-") resultadoFinal = primerNum - segundoNum
-    else if (cuenta === "*") resultadoFinal = primerNum * segundoNum
-    else if (cuenta === "/") resultadoFinal = primerNum / segundoNum
+    if (cuenta === "") {
+        resultadoFinal = segundoNum
+    }
+    else {
+        if (cuenta === "+") resultadoFinal = primerNum + segundoNum
+        else if (cuenta === "-") resultadoFinal = primerNum - segundoNum
+        else if (cuenta === "*") resultadoFinal = primerNum * segundoNum
+        else if (cuenta === "/") resultadoFinal = primerNum / segundoNum
+    }
+    cuenta = ""
     pantalla.value = resultadoFinal
     resultado = resultadoFinal
 })
@@ -67,6 +126,8 @@ igual.addEventListener('click', () => {
 
 const reset = document.querySelector('#reset')
 reset.addEventListener('click', () => {
+    resetColor()
+    displayReset()
     resultado = ""
     primerNum = 0
     segundoNum = 0
@@ -109,16 +170,18 @@ const dark = document.querySelector('#dark').addEventListener('click', () => {
 })
 const purple = document.querySelector('#purple').addEventListener('click', () => {
     document.querySelectorAll('.boton').forEach(elem => elem.style.background = "hotpink");
-    document.querySelector('#pantalla').style.background = "#c2bfc5"
+    document.querySelector('#pantalla').style.background = "#e3e0e8"
     document.querySelector('.calculadora').style.background = "#f4f1f9"
 })
 const orange = document.querySelector('#orange').addEventListener('click', () => {
     document.querySelectorAll('.boton').forEach(elem => elem.style.background = "coral");
-    document.querySelector('#pantalla').style.background = "#c2bfc5"
+    document.querySelector('#pantalla').style.background = "#e3e0e8"
+    document.querySelector('.calculadora').style.background = "#f4f1f9"
 })
 const blue = document.querySelector('#blue').addEventListener('click', () => {
     document.querySelectorAll('.boton').forEach(elem => elem.style.background = "aquamarine");
-    document.querySelector('#pantalla').style.background = "#c2bfc5"
+    document.querySelector('#pantalla').style.background = "#e3e0e8"
+    document.querySelector('.calculadora').style.background = "#f4f1f9"
 })
 
 

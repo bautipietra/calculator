@@ -5,6 +5,7 @@
 html { /* 1rem = 10 px */
   font-size: 62.5%;
   font-family: "Roboto Mono", monospace;
+  transition: 0.3s;
 }
 
 body {
@@ -41,11 +42,20 @@ body {
   padding: 20px;
   gap: 40px;
   border-radius: 10px;
+  transition: 0.3s;
 }
 .calculadora .pantalla {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+.calculadora .pantalla #display {
+  position: absolute;
+  right: 0;
+  margin-right: 20px;
+  font-size: 1.6rem;
+  color: #999;
 }
 .calculadora .pantalla input {
   background-color: #e3e0e8;
@@ -58,6 +68,7 @@ body {
   border-radius: 10px;
   font-size: 2rem;
   cursor: default;
+  transition: 0.3s;
 }
 .calculadora .botones {
   display: grid;
@@ -77,6 +88,10 @@ body {
   max-width: fit-content;
   border-radius: 10px;
   font-size: 1.4rem;
+  transition: 0.3s;
+}
+.calculadora .botones .boton:active {
+  background-color: #fff;
 }
 .calculadora .botones .icon {
   display: flex;
@@ -98,7 +113,7 @@ body {
   transition: 0.3s;
   opacity: 0;
   z-index: -1;
-  transform: translate(-50%, -30%);
+  transform: translate(-50%, 0%);
   -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%);
 }
